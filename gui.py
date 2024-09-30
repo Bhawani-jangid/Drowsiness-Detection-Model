@@ -13,7 +13,7 @@ mixer.init()
 sound = mixer.Sound('alarm.wav')
 
 # Correctly load face and eye detection models with error checking
-face_cascade_path = r"D:\project\Data Analysis\Drowsiness Detection Model\haarcascade_frontalface_default.xml"
+face_cascade_path = r"path_of_file\haarcascade_frontalface_default.xml"
 eye_cascade_path = cv2.data.haarcascades + "haarcascade_eye.xml"
 
 if not os.path.exists(face_cascade_path):
@@ -26,8 +26,8 @@ face_cascade = cv2.CascadeClassifier(face_cascade_path)
 eye_cascade = cv2.CascadeClassifier(eye_cascade_path)
 
 # Load the drowsiness detection model with error checking
-drowsiness_model_path = r"D:\project\Data Analysis\Drowsiness Detection Model\models\model.keras"
-age_model_path = r'D:\project\Data Analysis\Drowsiness Detection Model\Age Detection\models\best_model.keras'
+drowsiness_model_path = r"path_of_file\model.keras"
+age_model_path = r'path_of_file\best_model.keras'
 
 if not os.path.exists(drowsiness_model_path):
     raise FileNotFoundError(f"Drowsiness detection model not found at {drowsiness_model_path}")

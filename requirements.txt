@@ -1,0 +1,10 @@
+opencv-python
+tensorflow
+pygame
+tkinter
+Pillow
+pandas
+numpy
+matplotlib
+seaborn
+tqdm
